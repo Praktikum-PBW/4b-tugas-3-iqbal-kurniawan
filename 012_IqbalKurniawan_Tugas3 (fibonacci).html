@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacci(nomor){
+            let fibonacci = [];
+
+            for(let i = 0; true;i++){  //mulai  dari 0 selama i = true
+                if(i === 0 || i === 1) fibonacci.push(i);// 
+
+                if(i > 1 ) fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];// jika i > 1 maka nilai fibonacci sebelumnya ditambah nilai fibonacci sebelumnya
+
+                if(fibonacci.length === nomor) break;//jika panjang fibonacci sama dengan nomor/parameter maka loop akan berhenti 
+            }
+            return fibonacci.join(', ')
+        }
+        window.onload = function(){
+            document.write("Ini adalah contoh fibonacci <br>");
+            document.write(fibonacci(10));
+        }
+        console.log(fibonacci(10));
+    </script>
+</body>
+</html>

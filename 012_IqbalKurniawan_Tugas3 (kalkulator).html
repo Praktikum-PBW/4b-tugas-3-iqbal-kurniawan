@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 50px;
+        }
+        select{
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center" name="utama">
+        <h1>Kalkulator sederhana dengan arrow function</h1>
+        <input type="text" id="angka1">
+        <input type="text" id="angka2">
+        <span>=</span>
+        <input type="text" id="hasil"></input><br>
+        <button onclick=plus()>pertambahan</button>
+        <button onclick=min()>pengurangan</button>
+        <button onclick=bagi()>pembagian</button>
+        <button onclick=kali()>perkalian</button>
+        <button onclick=mod()>modulus</button>
+        <button onclick=resett()>reset</button>
+    </div>
+    <script>
+        const angka1 = document.getElementById('angka1')
+        const angka2 = document.getElementById('angka2')
+        const hasil = document.getElementById('hasil')
+        
+            plus = () =>{
+                hasil.value = Number(angka1.value) + Number(angka2.value);
+            }
+            min = () =>{
+                hasil.value = Number(angka1.value) - Number(angka2.value);
+            }
+            kali = () =>{
+                hasil.value = Number(angka1.value) * Number(angka2.value);
+            }
+            bagi = () =>{
+                hasil.value = Number(angka1.value) / Number(angka2.value);
+            }
+            mod = () =>{
+                hasil.value = Number(angka1.value) % Number(angka2.value);
+            }
+            resett = () =>{
+                angka1.value = " ";
+                angka2.value = " ";
+                hasil.value = " ";
+
+            }
+
+           
+        
+        
+       
+
+
+    </script>
+</body>
+</html>
